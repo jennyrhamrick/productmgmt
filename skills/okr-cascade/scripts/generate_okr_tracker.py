@@ -234,7 +234,7 @@ def main():
     structure = parse_notion_structure(content)
     wb = create_excel_tracker(structure, quarter)
     
-    filename = f"OKR_Tracker_{quarter}.xlsx"
+    filename = f"OKR_Tracker_{quarter.replace(" ", "_")}.xlsx"
     wb.save(filename)
     print(f"✓ Generated: {filename}")
 

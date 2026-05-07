@@ -1,0 +1,27 @@
+# Generated files
+*.xlsx
+*.xls
+*.csv
+*.pyc
+__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Temp
+.tmp/
+*.tmp

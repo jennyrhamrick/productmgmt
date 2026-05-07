@@ -154,4 +154,26 @@ The generated Excel file includes:
 
 ---
 
+## Implementation
+
+When invoked, this skill:
+
+1. **Parses input** — Extract the quarter and Notion content (either pasted text or fetched from a link)
+2. **Calls generate_okr_tracker.py** — Runs the Python script that parses the hierarchy and generates the Excel file
+3. **Returns the file** — Saves `OKR_Tracker_[Quarter].xlsx` and provides it to the user
+
+**Workflow:**
+```bash
+python scripts/generate_okr_tracker.py "[quarter]" "[notion_content]"
+```
+
+The script handles:
+- Markdown parsing of company/portfolio/team structure
+- Excel generation with formulas and formatting
+- Error logging for malformed input
+
+See `examples/sample-notion-input.md` for input format reference.
+
+---
+
 Created for product leaders. Saves ~3-4 hours per quarterly planning cycle.
